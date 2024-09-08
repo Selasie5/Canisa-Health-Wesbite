@@ -2,19 +2,23 @@
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom" ;
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
-import Services from "./pages/Services";
+import HCP from "./pages/HCP";
 import Contact from "./pages/Contact";
+import OurStory from "./pages/OurStory";
+import Footer from "./components/Footer";
 const App = () => {
   return (
 <Router>
   <Navbar/>
-  <div className="container mx-auto p-4">
+  <div className=" mx-auto ">
     <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/services" element={<Services/>}/>
+      <Route path="/health-care-professionals" element={<HCP/>}/>
+      <Route path="/our-story" element={<OurStory/>}/>
       <Route path="/contact-us" element={<Contact/>}/>
     </Routes>
   </div>
+  <Footer/>
 </Router>
   )
 }

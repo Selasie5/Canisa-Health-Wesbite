@@ -20,3 +20,67 @@ html{
     background-color: #f9f9f9;
   }
 }
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-object {
+  animation: rotate360 4s linear infinite;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px; /* Set max width for better layout on large screens */
+  margin: 0 auto; /* Center the carousel */
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: calc(100% * 6); /* Adjust the width based on the number of logos */
+}
+
+.logo-slide {
+  min-width: 33.33%; /* Show 3 logos on larger screens */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Add some padding around each logo */
+}
+
+.logo-slide img {
+  max-width: 150px; /* Control logo size */
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .logo-slide {
+    min-width: 50%; /* Show 2 logos on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-slide {
+    min-width: 50%; /* Show 2 logos on smaller screens */
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-slide {
+    min-width: 100%; /* Show 1 logo on the smallest screens */
+  }
+
+  .logo-slide img {
+    max-width: 100px; /* Make logos smaller on mobile screens */
+  }
+}

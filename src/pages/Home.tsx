@@ -172,7 +172,7 @@ const Home = () => {
       </section>
 
       <section className="bg-primary/40 h-auto p-10  text-center flex flex-col justify-center items-center gap-4 w-full">
-<span className="text-2xl leading-9">Take the first step towards a healthier you. Download the Canisa Health app now and start tracking your progress.</span>
+<span className="text-2xl leading-9 md:w-3/5">Take the first step towards a healthier you. Download the Canisa Health app now and start tracking your progress.</span>
 <button className="font-medium text-white px-20 py-4 rounded-full bg-primary">
     <Link to="/download">
     Download Canisa Health Today
