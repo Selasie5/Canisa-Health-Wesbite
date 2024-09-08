@@ -2,6 +2,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import FAQ from '../components/Home/FAQ';
 
+
 const validationSchema = Yup.object({
   name: Yup.string().required('Name is required'),
   email: Yup.string().email('Invalid email address').required('Email is required'),
@@ -10,6 +11,10 @@ const validationSchema = Yup.object({
 });
 
 const Contact = () => {
+
+ 
+  
+  
   const FAQS = [
     {
       id: 1,

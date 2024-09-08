@@ -9,7 +9,7 @@ const Footer = () => {
         email: Yup.string().email('Invalid email address').required('Email is required'),
       });
 
-    const EssentialLinks:{id:1,
+    const EssentialLinks:{id:number,
         tag: string,
         path: string,
     }[]=[
@@ -17,19 +17,20 @@ const Footer = () => {
             tag: "Home",
             path: "/"
         },
-        {id: 1,
+        {
+          id: 2,
             tag: "About Us",
             path: "/"
         },
-        {id: 1,
+        {id: 3,
             tag: "Partner With Us",
             path: "/"
         },
-        {id: 1,
+        {id: 4,
             tag: "Benefits",
             path: "/"
         },
-        {id: 1,
+        {id: 5,
             tag: "Features",
             path: "/"
         },
