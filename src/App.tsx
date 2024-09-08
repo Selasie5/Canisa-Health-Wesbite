@@ -6,7 +6,10 @@ import HCP from "./pages/HCP";
 import Contact from "./pages/Contact";
 import OurStory from "./pages/OurStory";
 import Footer from "./components/Footer";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 const App = () => {
+  AOS.init();
   return (
 <Router>
   <Navbar/>

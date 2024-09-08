@@ -66,11 +66,28 @@ const Contact = () => {
   return (
     <main className="space-y-20">
       <section className="text-center gap-2 px-10 flex flex-col justify-center items-center h-[40vh] md:gap-4">
-        <h1 className="text-3xl font-bold md:text-5xl">Contact Us</h1>
-        <p className="text-lg font-normal md:text-2xl md:w-3/5 ">Got any questions to ask or need help with anything? Reach out to our team for assistance</p>
+        <h1 className="text-3xl font-bold md:text-5xl"
+        data-aos="fade-in"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        >Contact Us</h1>
+        <p className="text-lg font-normal md:text-2xl md:w-3/5 "
+        data-aos="fade-in"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        >Got any questions to ask or need help with anything? Reach out to our team for assistance</p>
       </section>
       <section className="bg-primary h-auto p-10 rounded-xl md:w-3/5 mx-auto">
-        <div className="py-10 px-10 bg-white h-auto rounded-xl flex flex-col justify-center items-start">
+        <div className="py-10 px-10 bg-white h-auto rounded-xl flex flex-col justify-center items-start"
+        data-aos="fade-in"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false">
           <span className="text-[1.5rem] font-semibold">
             Get in Touch with the Canisa Health Team
           </span>
@@ -138,7 +155,13 @@ const Contact = () => {
         </div>
       </section>
       <section className="flex flex-col justidy-center items-center gap-4">
-        <h2 className="text-3xl font-[700] md:text-4xl">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-[700] md:text-4xl"
+        data-aos="fade-in"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        >Frequently Asked Questions</h2>
 {FAQS.map((faq)=>(
     <FAQ key={faq.id} question={faq.question} answer={faq.answer}/>
 ))}

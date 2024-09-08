@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import FeatureCard from "../components/Home/FeatureCard";
 import FAQ from "../components/Home/FAQ";
 
+
+
 const Home = () => {
+
   const Features = [
     {
       id: 1,
@@ -94,16 +97,33 @@ const Home = () => {
   return (
     <main className="space-y-36">
       {/* Hero Section */}
-      <section className="hero-section px-10  md:py-20 flex flex-col justify-center items-center gap-2 text-center">
-        <h1 className="text-6xl md:text-[4.25rem] font-[600] leading-[4.5rem] md:leading-[5.5rem] md:w-3/5">
+      <section className="hero-section px-10  py-20  flex flex-col justify-center items-center gap-2 text-center">
+        <h1 className="text-6xl md:text-[4.25rem] font-[600] leading-[4.5rem] md:leading-[5.5rem] md:w-3/5"
+         data-aos="fade-in"
+         data-aos-duration="1500"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false">
           <span className=" text-primary">Manage</span> Your{" "}
           <span className="text-primary">Health</span> With Confidence
         </h1>
-        <p className="md:w-3/5 md:text-xl text-grey">
+        <p className="md:w-3/5 md:text-xl text-grey"
+         data-aos="fade-in"
+         data-aos-duration="2000"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+        >
           Canisa Health provides tools and resources to track your blood
           pressure, understand your condition, and live a healthier life.
         </p>
-        <button className="bg-primary text-white font-medium text-md px-10 py-4 rounded-full mt-5">
+        <button className="bg-primary text-white font-medium text-md px-10 py-4 rounded-full mt-5"
+         data-aos="fade-in"
+         data-aos-duration="2500"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+        >
           <Link
             to="/login"
             className=" flex justify-center items-center gap-[0.75rem]"
@@ -129,15 +149,33 @@ const Home = () => {
             </span>
           </Link>
         </button>
-        <div className="mt-10">
+        <div className="mt-10"
+         data-aos="fade-in"
+         data-aos-duration="2000"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+         >
           <img src="/hero-img.png" alt="" className="md:w-[450px]" />
         </div>
       </section>
       <section className="flex flex-col justify-center items-center gap-4">
-        <h2 className="text-3xl text-center font-[700]">
+        <h2 className="text-3xl text-center font-[700]"
+         data-aos="fade-in"
+         data-aos-duration="1500"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+        >
           Personalized Chronic Care Management at your fingertips
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 md:gap-10 20">
+        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 md:gap-10 20"
+         data-aos="zoom-in"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+        >
           {Features.map((feature) => (
             <FeatureCard
               key={feature.id}
@@ -151,29 +189,80 @@ const Home = () => {
          
       </section>
       <section className="flex flex-col justify-center items-center gap-4 px-10 text-center">
-        <img src="./samsung-prototype.png" alt="Mobile UI" className="w-[250px] md:w-[300px]"/>
-        <h2 className="font-[700] text-black text-4xl md:text-[3.5rem]">Build a <span className="text-primary">
+        <img src="./samsung-prototype.png" alt="Mobile UI" className="w-[250px] md:w-[300px]" 
+         data-aos="fade-up"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+        />
+        <h2 className="font-[700] text-black text-4xl md:text-[3.5rem]"
+         data-aos="fade-up"
+         data-aos-duration="2000"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+        >Build a <span className="text-primary">
         Healthier </span> You</h2>
-        <p className="text-grey font-medium md:text-xl md:w-3/5"> Manage Health effectively with Canisa Health. Track, monitor, and receive personalized advice to improve your quality of life.</p>
+        <p className="text-grey font-medium md:text-xl md:w-3/5"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        > Manage Health effectively with Canisa Health. Track, monitor, and receive personalized advice to improve your quality of life.</p>
       </section>
 
       <section className="flex flex-col justify-center items-center gap-4 px-10 text-center">
-        <img src="./mobile-sim.png" alt="Mobile UI" className="scale-[1.25] md:w-[600px]"/>
-        <h2 className="font-[700] text-black text-4xl mt-[36px] md:text-[3.5rem]">Track, Analyze, Take Control
+        <img src="./mobile-sim.png" alt="Mobile UI" className="scale-[1.25] md:w-[600px]"
+         data-aos="fade-up"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+        />
+        <h2 className="font-[700] text-black text-4xl mt-[36px] md:text-[3.5rem]"
+         data-aos="fade-up"
+         data-aos-duration="2000"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+        >Track, Analyze, Take Control
        </h2>
-        <p className="text-grey font-medium md:text-xl md:w-3/5"> Empower yourself with Canisa Health. Track your vitals, analyze trends, and receive personalized advice. Take control of your health today.</p>
+        <p className="text-grey font-medium md:text-xl md:w-3/5"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"> Empower yourself with Canisa Health. Track your vitals, analyze trends, and receive personalized advice. Take control of your health today.</p>
       </section>
 
       <section className="flex flex-col justidy-center items-center gap-4">
-        <h2 className="text-3xl font-[700] md:text-4xl">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-[700] md:text-4xl"
+         data-aos="fade-in"
+         data-aos-duration="2000"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+        >Frequently Asked Questions</h2>
 {FAQS.map((faq)=>(
-    <FAQ key={faq.id} question={faq.question} answer={faq.answer}/>
+    <FAQ key={faq.id} question={faq.question} answer={faq.answer} />
 ))}
       </section>
 
       <section className="bg-primary/40 h-auto p-10  text-center flex flex-col justify-center items-center gap-4 w-full">
-<span className="text-2xl leading-9 md:w-3/5">Take the first step towards a healthier you. Download the Canisa Health app now and start tracking your progress.</span>
-<button className="font-medium text-white px-20 py-4 rounded-full bg-primary">
+<span className="text-2xl leading-9 md:w-3/5"
+ data-aos="fade-in"
+ data-aos-duration="2000"
+ data-aos-easing="ease-in-out"
+ data-aos-mirror="true"
+ data-aos-once="false"
+>Take the first step towards a healthier you. Download the Canisa Health app now and start tracking your progress.</span>
+<button className="font-medium text-white px-20 py-4 rounded-full bg-primary" data-aos="fade-in"
+ data-aos-duration="2000"
+ data-aos-easing="ease-in-out"
+ data-aos-mirror="true"
+ data-aos-once="false">
     <Link to="/download">
     Download Canisa Health Today
     </Link>

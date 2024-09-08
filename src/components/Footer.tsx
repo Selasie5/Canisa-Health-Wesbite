@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom"
+import { Formik, Form, ErrorMessage, Field } from "formik";
+import * as Yup from 'yup';
 
 const Footer = () => {
+
+    const validationSchema = Yup.object({
+        name: Yup.string().required('Name is required'),
+        email: Yup.string().email('Invalid email address').required('Email is required'),
+      });
+
     const EssentialLinks:{id:1,
         tag: string,
         path: string,
@@ -27,9 +35,9 @@ const Footer = () => {
         },
     ]
   return (
-    <footer className="bg-primary text-white mt-36 py-10 flex flex-col md:flex-row justify-center items-center">
-      <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-4">
-         <div className="flex flex-col justify-center items-start gap-8">
+    <footer className="bg-primary text-white  p-10 flex flex-col justify-center  items-start md:items-center gap-10">
+      <div className="flex flex-col md:flex-row justify-center items-start md:items-start gap-20">
+      <div className="flex flex-col justify-start items-start gap-8 md:w-1/3">
             <h5 className="text-xl font-medium">Essential Links</h5>
                 {EssentialLinks.map((links)=>(
                     <Link key={links.id}  to={links.path} >
@@ -37,7 +45,7 @@ const Footer = () => {
                         </Link>
                 ))}
          </div>
-         <div className="flex flex-col justify-between items-start gap-8">
+         <div className="flex flex-col justify-between items-start gap-8 md:w-1/3">
             <h5 className="text-xl font-medium">Contact Us</h5>
                 <div className="flex justify-between items-center gap-4">
 <span>
@@ -59,8 +67,70 @@ const Footer = () => {
 +2338123450987
 </span>
                 </div>
+                <div className="flex justify-center items-center gap-6">
+                    <Link to="/">
+                    <img src="/instagram.png" alt="instagram" className="w-6"/>
+                    </Link>
+                    <Link to="/">
+                    <img src="/meta.png" alt="facebook" className="w-5"/>
+                    </Link>
+                    <Link to="/">
+                    <img src="/twitter.png" alt="twitter" className="w-7"/>
+                    </Link>
+                </div>
+         </div> 
+
+         <div className="bg-green-800/40 p-5 rounded-lg h-auto text-white md:w-3/5">
+                <h4 className="text-xl">Be the first to receive our products update and other essential updates</h4>
+                <div>
+                <Formik
+            initialValues={{ name: '', email: '', phone: '', message: '' }}
+            validationSchema={validationSchema}
+            onSubmit={(values, { resetForm }) => {
+              // Handle form submission
+              console.log(values);
+
+              // Reset form fields
+              resetForm();
+            }}
+          >
+            {() => (
+              <Form className="mt-10 w-full flex flex-col justify-center items-start gap-7">
+                <div className="flex flex-col justify-center items-start gap-2 w-full">
+                  <Field 
+                    id="name"
+                    name="name"
+                    className="rounded-lg outline-none border border-white bg-transparent placeholder-white text-white px-5 py-3 w-full"
+                     placeholder="Enter your first name"
+                  />
+                  <ErrorMessage name="name" component="div" className="text-red-600 text-sm" />
+                </div>
+                <div className="flex flex-col justify-center items-start gap-2 w-full">
+                  <Field 
+                    id="email"
+                    name="email"
+                    type="email"
+                   placeholder="Enter your email address"
+                    className=" placeholder-white bg-transparent  text-white rounded-lg outline-none border border-white px-5 py-3 w-full"
+                  />
+                  <ErrorMessage name="email" component="div" className="text-red-600 text-sm" />
+                </div>
+              
+                <button 
+                  type="submit" 
+                  className="font-medium text-white bg-primary rounded-full px-10 py-3 w-full flex flex-col justify-center items-center"
+                >
+                  Subscribe
+                </button>
+              </Form>
+            )}
+          </Formik>
+                </div>
          </div>
       </div>
+     <div className="flex justify-center items-center">
+        <span className="text-white font-light text-xl">&copy; 2024 Canisa Health. All rights reserved</span>
+     </div>
     </footer>
   )
 }
