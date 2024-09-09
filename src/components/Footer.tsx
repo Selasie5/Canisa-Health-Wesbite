@@ -73,7 +73,7 @@ const Footer = () => {
                     <img src="/instagram.png" alt="instagram" className="w-6"/>
                     </Link>
                     <Link to="/">
-                    <img src="/meta.png" alt="facebook" className="w-5"/>
+                    <img src="/facebook.png" alt="facebook" className="w-5"/>
                     </Link>
                     <Link to="/">
                     <img src="/twitter.png" alt="twitter" className="w-7"/>
@@ -129,8 +129,8 @@ const Footer = () => {
                 </div>
          </div>
       </div>
-     <div className="flex justify-center items-center">
-        <span className="text-white font-light text-xl">&copy; 2024 Canisa Health. All rights reserved</span>
+     <div className="flex justify-center items-center text-center">
+        <span className="text-white font-light text-md md:text-lg">&copy; 2024 Canisa Health. All rights reserved</span>
      </div>
     </footer>
   )

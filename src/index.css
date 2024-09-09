@@ -84,3 +84,30 @@ html{
     max-width: 100px; /* Make logos smaller on mobile screens */
   }
 }
+
+/* Add transition effects for smooth opening */
+.menu-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 50;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 2rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-slide.open {
+  transform: translateX(0);
+}
+
+.menu-icon {
+  transition: transform 0.3s ease-in-out;
+}
