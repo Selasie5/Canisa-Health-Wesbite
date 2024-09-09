@@ -251,14 +251,14 @@ const Home = () => {
       </section>
 
       <section className="bg-primary/40 h-auto p-10  text-center flex flex-col justify-center items-center gap-4 w-full">
-<span className="text-2xl leading-9 md:w-3/5"
+<span className=" text-lg md:text-2xl leading-9 md:w-3/5"
  data-aos="fade-in"
  data-aos-duration="2000"
  data-aos-easing="ease-in-out"
  data-aos-mirror="true"
  data-aos-once="false"
 >Take the first step towards a healthier you. Download the Canisa Health app now and start tracking your progress.</span>
-<button className=" text-sm md:text-lg font-medium text-white px-20 py-4 rounded-full bg-primary" data-aos="fade-in"
+<button className=" text-xs md:text-lg font-medium text-white px-20 py-4 rounded-full bg-primary" data-aos="fade-in"
  data-aos-duration="2000"
  data-aos-easing="ease-in-out"
  data-aos-mirror="true"
