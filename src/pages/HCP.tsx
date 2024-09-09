@@ -184,7 +184,7 @@ data-aos="fade-in"
  data-aos-mirror="true"
  data-aos-once="false"
 >Elevate your practice and transform patient care. Sign up now to experience the future of healthcare.</span>
-<button className="font-medium text-white px-20 py-4 rounded-full bg-primary">
+<button className="text-sm md:text-lg font-medium text-white px-20 py-4 rounded-full bg-primary">
     <Link to="/download">
     Join Canisa Health Today
     </Link>
