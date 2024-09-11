@@ -1,6 +1,8 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import FAQ from '../components/Home/FAQ';
+import emailjs from 'emailjs-com';
+
 
 
 const validationSchema = Yup.object({
@@ -12,7 +14,25 @@ const validationSchema = Yup.object({
 
 const Contact = () => {
 
- 
+  const sendEmail = (values:any) => {
+    const templateParams = {
+      from_name: values.name,
+      from_email: values.email,
+      from_phone: values.phone,
+      message: values.message,
+      to_name: 'Canisa Health Team'
+    };
+
+    emailjs.send('service_al1hqby', 'template_k8dyakv', templateParams, 'UQFOJ-EiMs3pIyj-S')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Message sent successfully!');
+      })
+      .catch((error) => {
+        console.log('FAILED...', error);
+        alert('Message failed to send.');
+      });
+  };
   
   
   const FAQS = [
@@ -103,7 +123,7 @@ const Contact = () => {
             onSubmit={(values, { resetForm }) => {
               // Handle form submission
               console.log(values);
-
+              sendEmail(values);
               // Reset form fields
               resetForm();
             }}

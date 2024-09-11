@@ -2,7 +2,52 @@ import { Link } from "react-router-dom"
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from 'yup';
 
+import { useState } from "react";
+
 const Footer = () => {
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("")
+  const [error, setError] = useState("")
+  const mailerApiKey = import.meta.env.MAILER_KEY
+  const ProductUpdateSubscription= async(values:any)=>
+  {
+    console.log( mailerApiKey);
+    setLoading(true);
+    setSuccess("");
+    setError("");
+    try {
+      const response = await fetch("https://connect.mailerlite.com/api/subscribers",{
+        method: "POST",
+        headers:{
+          "Content-Type" :"application/json",
+          "Accept": "application/json",
+          "Authorization": `Bearer ${mailerApiKey}`,
+        },
+        body: JSON.stringify({
+          email: values.email,
+          fields:{
+            name: values.name
+          },
+          // groups:[""]
+        })
+      });
+      if(response.ok){
+        setSuccess("You have successfully sunscribed to the newsletter");
+        console.log(response);
+      }else{
+        const errorData= await response.json();
+        console.log(errorData)
+        setError(errorData.message || "Something wnet wrong!");
+      }
+    } catch (err) {
+      // 
+      console.log(err)
+    }
+    finally{
+      setLoading(false)
+    }
+  }
 
     const validationSchema = Yup.object({
         name: Yup.string().required('Name is required'),
@@ -90,6 +135,7 @@ const Footer = () => {
             onSubmit={(values, { resetForm }) => {
               // Handle form submission
               console.log(values);
+              ProductUpdateSubscription(values);
 
               // Reset form fields
               resetForm();
@@ -121,7 +167,11 @@ const Footer = () => {
                   type="submit" 
                   className="font-medium text-white bg-primary rounded-full px-10 py-3 w-full flex flex-col justify-center items-center"
                 >
-                  Subscribe
+                  {loading ? (
+                    "Loading.."
+                  ): (
+                    <p>Suscribe</p>
+                  )}
                 </button>
               </Form>
             )}
@@ -132,6 +182,8 @@ const Footer = () => {
      <div className="flex justify-center items-center text-center">
         <span className="text-white font-light text-md md:text-lg">&copy; 2024 Canisa Health. All rights reserved</span>
      </div>
+     {error}
+     {success}
     </footer>
   )
 }
