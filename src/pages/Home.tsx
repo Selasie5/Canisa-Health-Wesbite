@@ -98,7 +98,7 @@ const Home = () => {
     <main className="space-y-36">
       {/* Hero Section */}
       <section className="hero-section px-10  py-20  flex flex-col justify-center items-center gap-2 text-center">
-        <h1 className="text-[38px] md:text-[4.25rem] font-[600] leading-normal md:leading-[5.5rem] md:w-3/5"
+        <h1 className="text-[42px] md:text-[4.25rem] font-[600] leading-normal md:leading-[5.5rem] md:w-3/5"
          data-aos="fade-in"
          data-aos-duration="1500"
          data-aos-easing="ease-in-out"

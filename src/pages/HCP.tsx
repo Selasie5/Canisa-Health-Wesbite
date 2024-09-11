@@ -54,7 +54,7 @@ const HCP = () => {
           </Link>
         </button>
       </section>
-      <section className="flex flex-col justify-center items-center gap-4 p-10">
+      <section className="flex flex-col justify-center items-center gap-10 px-10 p">
         <h2 className="text-grey text-4xl text-center font-[700]"
          data-aos="fade-in"
          data-aos-duration="2500"
@@ -71,7 +71,7 @@ const HCP = () => {
         />
       </section>
      
-      <section className="flex flex-col justify-center items-center gap-4 p-10">
+      <section className="flex flex-col justify-center items-center gap-4 px-10">
         <h2 className="text-grey text-4xl text-center font-[700]"
         data-aos="fade-in"
         data-aos-duration="2500"
