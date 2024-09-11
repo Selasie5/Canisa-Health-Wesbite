@@ -97,8 +97,8 @@ const Home = () => {
   return (
     <main className="space-y-36">
       {/* Hero Section */}
-      <section className="hero-section px-10  py-20  flex flex-col justify-center items-center gap-2 text-center">
-        <h1 className="text-[42px] md:text-[4.25rem] font-[600] leading-normal md:leading-[5.5rem] md:w-3/5"
+      <section className="hero-section px-5  md:px-10  py-20  flex flex-col justify-center items-center gap-2 text-center">
+        <h1 className="text-[32px] md:text-[4.25rem] font-[600] leading-normal w-full md:leading-[5.5rem] md:w-3/5"
          data-aos="fade-in"
          data-aos-duration="1500"
          data-aos-easing="ease-in-out"
@@ -107,7 +107,7 @@ const Home = () => {
           <span className=" text-primary">Manage</span> Your{" "}
           <span className="text-primary">Health</span> With Confidence
         </h1>
-        <p className="md:w-3/5 md:text-xl text-grey"
+        <p className="md:w-3/5 text-sm md:text-xl text-grey"
          data-aos="fade-in"
          data-aos-duration="2000"
          data-aos-easing="ease-in-out"
@@ -160,7 +160,7 @@ const Home = () => {
         </div>
       </section>
       <section className="flex flex-col justify-center items-center gap-4">
-        <h2 className="text-3xl text-center font-[700]"
+        <h2 className=" text-[28px] md:text-3xl text-center font-[700]"
          data-aos="fade-in"
          data-aos-duration="1500"
          data-aos-easing="ease-in-out"
@@ -251,14 +251,14 @@ const Home = () => {
       </section>
 
       <section className="bg-primary/40 h-auto p-10  text-center flex flex-col justify-center items-center gap-4 w-full">
-<span className=" text-lg md:text-2xl leading-9 md:w-3/5"
+<span className=" text-sm md:text-2xl  leading-normal md:leading-9 md:w-3/5"
  data-aos="fade-in"
  data-aos-duration="2000"
  data-aos-easing="ease-in-out"
  data-aos-mirror="true"
  data-aos-once="false"
 >Take the first step towards a healthier you. Download the Canisa Health app now and start tracking your progress.</span>
-<button className=" text-xs md:text-lg font-medium text-white px-20 py-4 rounded-full bg-primary" data-aos="fade-in"
+<button className=" text-xs md:text-lg font-medium text-white px-5  md:px-20 py-4 rounded-full bg-primary" data-aos="fade-in"
  data-aos-duration="2000"
  data-aos-easing="ease-in-out"
  data-aos-mirror="true"
