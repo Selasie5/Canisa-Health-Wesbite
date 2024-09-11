@@ -238,7 +238,7 @@ const Home = () => {
       </section>
 
       <section className="flex flex-col justidy-center items-center gap-4">
-        <h2 className="text-3xl font-[700] md:text-4xl"
+        <h2 className="text-3xl font-[700] md:text-4xl text-center"
          data-aos="fade-in"
          data-aos-duration="2000"
          data-aos-easing="ease-in-out"
