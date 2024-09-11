@@ -111,3 +111,45 @@ html{
 .menu-icon {
   transition: transform 0.3s ease-in-out;
 }
+
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.partnership-cards {
+  scroll-snap-type: x mandatory;
+}
+
+.partnership-card {
+  scroll-snap-align: start;
+  flex: 0 0 80%; /* Adjust width for mobile view */
+  /* min-width: ; Min width for card */
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  display: flex;
+  overflow-x: hidden;
+  animation: scroll 20s linear infinite;
+}
+
+.logos img {
+  flex-shrink: 0;
+}

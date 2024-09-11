@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <main className='relative'>
-      <nav className="bg-white shadow-lg p-4 sticky top-0 z-50">
+      <nav className="bg-white shadow-lg p-[0.75rem] sticky top-0 z-50">
         <div className='flex justify-between items-center px-10'>
           <div className='flex justify-center items-center gap-20'>
             <div className='logo'>

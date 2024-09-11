@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import LogoCarousel from "../components/OurStory/LogoCarousel"
+// import LogoCarousel from "../components/OurStory/LogoCarousel"
+import PartnershipCard from "../components/OurStory/PartnershipCard"
 
 
 const OurStory = () => {
@@ -47,30 +48,59 @@ const OurStory = () => {
                 data-aos-once="false"/>
             </section>
             <section className="flex flex-col justify-center items-center gap-5">
-                <h2 className="text-4xl font-[700]"
-                data-aos="fade-in"
-                data-aos-duration="1500"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                >Our Partners</h2>
-               <LogoCarousel/>
-            </section>
-            <section className=" px-5 flex flex-col justify-center items-start gap-3">
-              <div>
-                <span className="text-green-900 text-lg font-medium rounded-full bg-primary/30 px-10 py-2 text-md"
-                data-aos="fade-in"
-                data-aos-duration="1500"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                >Opportunities</span>
-              </div>
-              <div className="">
-             {/* Sliding Content */}
+  <h2 className="text-4xl font-[700]"
+    data-aos="fade-in"
+    data-aos-duration="1500"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+  >
+    Our Partners
+  </h2>
+  <div className="carousel logos w-full">
+    <img src="/pfizer_logo.svg.svg" alt="Pfizer" className="w-[7rem]" />
+    <img src="/ferring_logo.svg.svg" alt="Ferring" className="w-[7rem]" />
+    <img src="/merck_logo.svg.svg" alt="Merck" className="w-[7rem]" />
+    <img src="/pfizer_logo.svg.svg" alt="Pfizer" className="w-[7rem]" />
+    <img src="/ferring_logo.svg.svg" alt="Ferring" className="w-[7rem]" />
+  </div>
+</section>
 
-              </div>
-            </section>
+<section className="px-5 flex flex-col justify-center items-start gap-3">
+  <div>
+    <span className="text-green-900 text-lg font-medium rounded-full bg-primary/30 px-10 py-2 text-md"
+      data-aos="fade-in"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+    >
+      Opportunities
+    </span>
+  </div>
+  <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+
+  
+  <div className="w-full md:w-1/4">
+    <h3 className="text-4xl font-bold text-black">Partnership Opportunities With Canisa Health</h3>
+  </div>
+  <div className="carousel partnership-cards w-full md:w-1/2 space-x-10">
+    <PartnershipCard
+      title="Co-Create Patient Education"
+      description="Partner in developing engaging educational content within the Canisa Health app. Share your expertise, reach a wider audience, and establish yourself as a leader in Health management."
+    />
+    <PartnershipCard
+      title="Co-Create Patient Education"
+      description="Partner in developing engaging educational content within the Canisa Health app. Share your expertise, reach a wider audience, and establish yourself as a leader in Health management."
+    />
+    <PartnershipCard
+      title="Co-Create Patient Education"
+      description="Partner in developing engaging educational content within the Canisa Health app. Share your expertise, reach a wider audience, and establish yourself as a leader in Health management."
+    />
+  </div>
+  </div>
+</section>
+
 
             <div className="flex flex-col justify-center items-center py-10">
               <button className="text-white bg-primary px-5 py-3 rounded-full"
