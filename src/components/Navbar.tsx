@@ -18,8 +18,8 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <main className='relative'>
-      <nav className="bg-white shadow-lg p-[0.7rem] md:py-6 sticky top-0 z-50">
+    <main className='relative pb-20'>
+      <nav className="bg-white shadow-lg p-[0.7rem] md:py-4 fixed w-full top-0 z-50">
         <div className='flex justify-between items-center px-10'>
           <div className='flex justify-center items-center gap-20'>
             <div className='logo'>

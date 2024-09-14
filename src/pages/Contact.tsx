@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import FAQ from '../components/Home/FAQ';
 import emailjs from 'emailjs-com';
+import Toastify from 'toastify-js';
+import "toastify-js/src/toastify.css";
+
 
 
 
@@ -14,6 +18,10 @@ const validationSchema = Yup.object({
 
 const Contact = () => {
 
+
+  const [loading, setLoading] = useState<boolean>(false);
+
+
   const sendEmail = (values:any) => {
     const templateParams = {
       from_name: values.name,
@@ -22,11 +30,26 @@ const Contact = () => {
       message: values.message,
       to_name: 'Canisa Health Team'
     };
-
+    setLoading(true);
     emailjs.send('service_al1hqby', 'template_k8dyakv', templateParams, 'UQFOJ-EiMs3pIyj-S')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        alert('Message sent successfully!');
+        Toastify({
+          text: "Your message has been successfully submitted. We will be in toucn with you shortly.",
+          duration: 3000,
+          destination: "https://github.com/apvarun/toastify-js",
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+          },
+          // onClick: function(){} // Callback after click
+        }).showToast();
+        setLoading(false);
+        // alert('Message sent successfully!');
       })
       .catch((error) => {
         console.log('FAILED...', error);
@@ -172,7 +195,11 @@ const Contact = () => {
                   type="submit" 
                   className="font-medium text-white bg-primary rounded-full px-10 py-3 w-full flex flex-col justify-center items-center"
                 >
-                  Send Message
+                 {loading ? (
+                  <div className="loader"></div> 
+                 ): (
+                  <span>Send Message</span>
+                 )}
                 </button>
               </Form>
             )}
