@@ -65,11 +65,11 @@ const Footer = () => {
         {
           id: 2,
             tag: "About Us",
-            path: "/"
+            path: "/our-story"
         },
         {id: 3,
             tag: "Partner With Us",
-            path: "/"
+            path: "/health-care-professionals"
         },
         {id: 4,
             tag: "Benefits",
