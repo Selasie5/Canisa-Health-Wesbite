@@ -100,7 +100,7 @@ const Home = () => {
       <section className="hero-section px-5  md:px-10  py-20  flex flex-col justify-center items-center gap-2 text-center">
         <h1 className="text-[32px] md:text-[4.25rem] font-[600] leading-normal w-full md:leading-[5.5rem] md:w-3/5"
          data-aos="fade-in"
-         data-aos-duration="1500"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false">
@@ -109,7 +109,7 @@ const Home = () => {
         </h1>
         <p className="md:w-3/5 text-sm md:text-xl text-grey"
          data-aos="fade-in"
-         data-aos-duration="2000"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false"
@@ -133,7 +133,7 @@ const Home = () => {
             <span>
               {" "}
               <svg
-                xmlns="http://www.w3.org/2000/svg"
+                xmlns="http://www.w3.org/1000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
@@ -151,7 +151,7 @@ const Home = () => {
         </button>
         <div className="mt-10"
          data-aos="fade-in"
-         data-aos-duration="2000"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false"
@@ -162,7 +162,7 @@ const Home = () => {
       <section className="flex flex-col justify-center items-center gap-4">
         <h2 className=" text-[28px] md:text-3xl text-center font-[700]"
          data-aos="fade-in"
-         data-aos-duration="1500"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false"
@@ -198,7 +198,7 @@ const Home = () => {
         />
         <h2 className="font-[700] text-black text-4xl md:text-[3.5rem]"
          data-aos="fade-up"
-         data-aos-duration="2000"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false"
@@ -206,7 +206,7 @@ const Home = () => {
         Healthier </span> You</h2>
         <p className="text-grey font-medium md:text-xl md:w-3/5"
         data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -223,7 +223,7 @@ const Home = () => {
         />
         <h2 className="font-[700] text-black text-4xl mt-[36px] md:text-[3.5rem]"
          data-aos="fade-up"
-         data-aos-duration="2000"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false"
@@ -231,7 +231,7 @@ const Home = () => {
        </h2>
         <p className="text-grey font-medium md:text-xl md:w-3/5"
         data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
         data-aos-once="false"> Empower yourself with Canisa Health. Track your vitals, analyze trends, and receive personalized advice. Take control of your health today.</p>
@@ -240,7 +240,7 @@ const Home = () => {
       <section className="flex flex-col justidy-center items-center gap-4">
         <h2 className="text-3xl font-[700] md:text-4xl text-center"
          data-aos="fade-in"
-         data-aos-duration="2000"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false"
@@ -253,13 +253,13 @@ const Home = () => {
       <section className="bg-primary/40 h-auto p-10  text-center flex flex-col justify-center items-center gap-4 w-full">
 <span className=" text-sm md:text-2xl  leading-normal md:leading-9 md:w-3/5"
  data-aos="fade-in"
- data-aos-duration="2000"
+ data-aos-duration="1000"
  data-aos-easing="ease-in-out"
  data-aos-mirror="true"
  data-aos-once="false"
 >Take the first step towards a healthier you. Download the Canisa Health app now and start tracking your progress.</span>
 <button className=" text-xs md:text-lg font-medium text-white px-5  md:px-20 py-4 rounded-full bg-primary" data-aos="fade-in"
- data-aos-duration="2000"
+ data-aos-duration="1000"
  data-aos-easing="ease-in-out"
  data-aos-mirror="true"
  data-aos-once="false">

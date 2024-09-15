@@ -124,15 +124,7 @@ html{
   display: none; /* Hide scrollbar */
 }
 
-.partnership-cards {
-  scroll-snap-type: x mandatory;
-}
 
-.partnership-card {
-  scroll-snap-align: start;
-  flex: 0 0 80%; /* Adjust width for mobile view */
-  /* min-width: ; Min width for card */
-}
 
 
 @keyframes scroll {

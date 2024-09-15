@@ -44,7 +44,7 @@ const HCP = () => {
         >Connect with patients, streamline your workflow, and make a meaningful impact.</p>
         <button className="bg-primary px-10 py-3 text-white rounded-full"
         data-aos="fade-in"
-        data-aos-duration="2500"
+        data-aos-duration="1000"
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -57,14 +57,14 @@ const HCP = () => {
       <section className="flex flex-col justify-center items-center gap-10 px-10 p">
         <h2 className="text-grey text-4xl text-center font-[700]"
          data-aos="fade-in"
-         data-aos-duration="2500"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false"
         >Empower Your Practice With Canisa Health</h2>
         <img src="/2.png" alt="" className="w-[650px]"
          data-aos="fade-in"
-         data-aos-duration="2500"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false"
@@ -74,14 +74,14 @@ const HCP = () => {
       <section className="flex flex-col justify-center items-center gap-4 px-10">
         <h2 className="text-grey text-4xl text-center font-[700]"
         data-aos="fade-in"
-        data-aos-duration="2500"
+        data-aos-duration="1000"
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
         data-aos-once="false"
         >Secure Messaging</h2>
         <p className="text-[1.25rem] text-grey font-medium text-center"
          data-aos="fade-in"
-         data-aos-duration="2500"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false"
@@ -140,7 +140,7 @@ const HCP = () => {
       <section className="flex flex-col justify-center items-center gap-10 p-5">
         <h2 className="text-grey text-4xl md:text-5xl md:w-3/5 text-center font-[700]"
          data-aos="fade-in"
-         data-aos-duration="2500"
+         data-aos-duration="1000"
          data-aos-easing="ease-in-out"
          data-aos-mirror="true"
          data-aos-once="false"

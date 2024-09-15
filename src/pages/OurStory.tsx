@@ -78,24 +78,24 @@ const OurStory = () => {
       Opportunities
     </span>
   </div>
-  <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+  <div className="flex flex-col  justify-center items-center gap-4">
 
   
-  <div className="w-full md:w-1/4">
+  <div className="w-full ">
     <h3 className="text-4xl font-bold text-black">Partnership Opportunities With Canisa Health</h3>
   </div>
-  <div className="carousel partnership-cards w-full md:w-1/2 space-x-10">
+  <div className="carousel partnership-cards w-full  space-x-10">
     <PartnershipCard
       title="Co-Create Patient Education"
       description="Partner in developing engaging educational content within the Canisa Health app. Share your expertise, reach a wider audience, and establish yourself as a leader in Health management."
     />
     <PartnershipCard
-      title="Co-Create Patient Education"
-      description="Partner in developing engaging educational content within the Canisa Health app. Share your expertise, reach a wider audience, and establish yourself as a leader in Health management."
+      title="Community Outreach Together"
+      description="Join forces on community initiatives. Organize events to raise awareness about Health and promote healthy lifestyles. Make a positive impact, gain brand exposure, and potentially attract new patients."
     />
     <PartnershipCard
-      title="Co-Create Patient Education"
-      description="Partner in developing engaging educational content within the Canisa Health app. Share your expertise, reach a wider audience, and establish yourself as a leader in Health management."
+      title="Data-Driven Research"
+      description="Collaborate on research projects utilizing anonymized patient data. Advance scientific knowledge, develop new treatment approaches for African populations, and potentially co-author impactful publications."
     />
   </div>
   </div>
