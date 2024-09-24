@@ -84,7 +84,7 @@ const OurStory = () => {
   <div className="w-full ">
     <h3 className="text-4xl font-bold text-black">Partnership Opportunities With Canisa Health</h3>
   </div>
-  <div className="carousel partnership-cards w-full  space-x-10">
+  <div className="carousel partnership-cards w-full  md:space-x-10 flex flex-col md:flex row justify-center items-center gap-[1rem]">
     <PartnershipCard
       title="Co-Create Patient Education"
       description="Partner in developing engaging educational content within the Canisa Health app. Share your expertise, reach a wider audience, and establish yourself as a leader in Health management."

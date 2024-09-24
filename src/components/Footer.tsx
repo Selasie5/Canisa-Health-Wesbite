@@ -114,14 +114,15 @@ const Footer = () => {
 </span>
                 </div>
                 <div className="flex justify-center items-center gap-6">
-                    <Link to="/">
-                    <img src="/instagram.png" alt="instagram" className="w-6"/>
+                    <Link to=" https://instagram.com/canisahealth">
+                    <img src="/insta.svg" alt="instagram" className="w-6"/>
                     </Link>
-                    <Link to="/">
-                    <img src="/facebook.png" alt="facebook" className="w-5"/>
+                    <Link to="https://www.linkedin.com/company/canisa-health-ince">
+                    <img src="/linkedin.svg" alt="facebook" className="w-5"/>
                     </Link>
-                    <Link to="/">
-                    <img src="/twitter.png" alt="twitter" className="w-7"/>
+                    <Link to="https://x.com/canisahealth
+">
+                    <img src="/x.jpeg" alt="twitter" className="w-7"/>
                     </Link>
                 </div>
          </div> 
