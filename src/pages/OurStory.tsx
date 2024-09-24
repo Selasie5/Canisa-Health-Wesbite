@@ -57,12 +57,11 @@ const OurStory = () => {
   >
     Our Partners
   </h2>
-  <div className="carousel logos w-full">
-    <img src="/pfizer_logo.svg.svg" alt="Pfizer" className="w-[7rem]" />
-    <img src="/ferring_logo.svg.svg" alt="Ferring" className="w-[7rem]" />
-    <img src="/merck_logo.svg.svg" alt="Merck" className="w-[7rem]" />
-    <img src="/pfizer_logo.svg.svg" alt="Pfizer" className="w-[7rem]" />
-    <img src="/ferring_logo.svg.svg" alt="Ferring" className="w-[7rem]" />
+  <div className="flex justify-center items-center gap-10 py-5">
+    <img src="/db.png" alt="Ashesi D-Lab" className="w-[7rem]" />
+    <img src="/3.png" alt="Ferring" className="w-[12rem]" />
+    <img src="/Ford-Foundation.svg" alt="Merck" className="w-[7rem]" />
+    <img src="/ii.jpeg" alt="Pfizer" className="w-[7rem]" />
   </div>
 </section>
 
@@ -84,7 +83,7 @@ const OurStory = () => {
   <div className="w-full ">
     <h3 className="text-4xl font-bold text-black">Partnership Opportunities With Canisa Health</h3>
   </div>
-  <div className="carousel partnership-cards w-full  md:space-x-10 flex flex-col md:flex row justify-center items-center gap-[1rem]">
+  <div className="carousel partnership-cards w-full  md:space-x-10 flex flex-col md:flex-row justify-center items-center gap-[1rem]">
     <PartnershipCard
       title="Co-Create Patient Education"
       description="Partner in developing engaging educational content within the Canisa Health app. Share your expertise, reach a wider audience, and establish yourself as a leader in Health management."
