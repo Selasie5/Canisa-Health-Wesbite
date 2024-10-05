@@ -237,8 +237,8 @@ const Home = () => {
         data-aos-once="false"> Empower yourself with Canisa Health. Track your vitals, analyze trends, and receive personalized advice. Take control of your health today.</p>
       </section>
 
-      <section className="flex flex-col justidy-center items-center gap-4">
-        <h2 className="text-3xl font-[700] md:text-4xl text-center"
+      <section className="flex flex-col justify-center items-center gap-4">
+        <h2 className="text-3xl font-[700] md:text-4xl text-center px-3"
          data-aos="fade-in"
          data-aos-duration="1000"
          data-aos-easing="ease-in-out"
