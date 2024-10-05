@@ -2,10 +2,10 @@ import { Link } from "react-router-dom"
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from 'yup';
 
+
 import { useState } from "react";
 
 const Footer = () => {
-
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("")
   const [error, setError] = useState("")
