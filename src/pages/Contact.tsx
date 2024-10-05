@@ -31,7 +31,7 @@ const Contact = () => {
       to_name: 'Canisa Health Team'
     };
     setLoading(true);
-    emailjs.send('service_al1hqby', 'template_k8dyakv', templateParams, 'UQFOJ-EiMs3pIyj-S')
+    emailjs.send('service_pzvy7v8', 'template_9vve1r5', templateParams, 'UQFOJ-EiMs3pIyj-S')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         Toastify({
