@@ -67,31 +67,31 @@ const Home = () => {
       question: "Is my personal health data secure on Canisa Health?",
       answer: "Yes, your personal health data is protected with advanced security measures, including encryption and secure data storage. Canisa Health prioritizes your privacy and complies with all relevant regulations.",
     },
-    {
-      id: 6,
-      question: "Can I find nearby pharmacies using Canisa Health?",
-      answer: "Yes, Canisa Health provides a feature that allows you to locate nearby pharmacies based on your current location. This helps you access medications and other healthcare products quickly.",
-    },
-    {
-      id: 7,
-      question: "Does Canisa Health offer medication reminders?",
-      answer: "Yes, the Canisa Health app includes a medication reminder feature that allows you to set alerts for taking your medications on time. This helps you stay on track with your prescribed treatments.",
-    },
-    {
-      id: 8,
-      question: "How do I get started with Canisa Health?",
-      answer: "To get started, download the Canisa Health app from the App Store or Google Play, create an account, and begin exploring the features to manage your health effectively.",
-    },
-    {
-      id: 9,
-      question: "Is Canisa Health free to use?",
-      answer: "Canisa Health offers both free and premium features. You can access basic health tracking and consultation features for free, while advanced features may require a subscription.",
-    },
-    {
-      id: 10,
-      question: "How can I contact Canisa Health support?",
-      answer: "You can contact Canisa Health support through the app or website by navigating to the 'Support' section. Here, you can find various ways to reach out, including email and live chat options.",
-    },
+    // {
+    //   id: 6,
+    //   question: "Can I find nearby pharmacies using Canisa Health?",
+    //   answer: "Yes, Canisa Health provides a feature that allows you to locate nearby pharmacies based on your current location. This helps you access medications and other healthcare products quickly.",
+    // },
+    // {
+    //   id: 7,
+    //   question: "Does Canisa Health offer medication reminders?",
+    //   answer: "Yes, the Canisa Health app includes a medication reminder feature that allows you to set alerts for taking your medications on time. This helps you stay on track with your prescribed treatments.",
+    // },
+    // {
+    //   id: 8,
+    //   question: "How do I get started with Canisa Health?",
+    //   answer: "To get started, download the Canisa Health app from the App Store or Google Play, create an account, and begin exploring the features to manage your health effectively.",
+    // },
+    // {
+    //   id: 9,
+    //   question: "Is Canisa Health free to use?",
+    //   answer: "Canisa Health offers both free and premium features. You can access basic health tracking and consultation features for free, while advanced features may require a subscription.",
+    // },
+    // {
+    //   id: 10,
+    //   question: "How can I contact Canisa Health support?",
+    //   answer: "You can contact Canisa Health support through the app or website by navigating to the 'Support' section. Here, you can find various ways to reach out, including email and live chat options.",
+    // },
   ];
   
   return (
@@ -159,7 +159,7 @@ const Home = () => {
           <img src="/hero-img.png" alt="" className="md:w-[450px]" />
         </div>
       </section>
-      <section className="flex flex-col justify-center items-center gap-4">
+      <section  id="features" className="flex flex-col justify-center items-center gap-4">
         <h2 className=" text-[28px] md:text-3xl text-center font-[700]"
          data-aos="fade-in"
          data-aos-duration="1000"

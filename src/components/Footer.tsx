@@ -1,57 +1,56 @@
 import { Link } from "react-router-dom"
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from 'yup';
-
+// import { google } from "googleapis";
 
 import { useState } from "react";
 
 const Footer = () => {
+  
+ 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("")
   const [error, setError] = useState("")
-  const mailerApiKey = import.meta.env.MAILER_KEY
-  const ProductUpdateSubscription= async(values:any)=>
-  {
-    console.log( mailerApiKey);
+
+  const ProductUpdateSubscription = async (values) => {
     setLoading(true);
     setSuccess("");
     setError("");
+  
+    // Create a URLSearchParams object to format the data as key-value pairs
+    const formData = new URLSearchParams();
+    formData.append('Name', values.Name);
+    formData.append('Email', values.Email);
+  
     try {
-      const response = await fetch("https://connect.mailerlite.com/api/subscribers",{
+      const response = await fetch("https://script.google.com/macros/s/AKfycbzkXCezndKD8u1oCXH-tDufEwmBJuyEprlU2O4o7TKmHmFsLMZ4nvnfQd-IU9sLWbT0/exec", {
         method: "POST",
-        headers:{
-          "Content-Type" :"application/json",
-          "Accept": "application/json",
-          "Authorization": `Bearer ${mailerApiKey}`,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'  // Use the correct header for form data
         },
-        body: JSON.stringify({
-          email: values.email,
-          fields:{
-            name: values.name
-          },
-          // groups:[""]
-        })
+        body: formData,  // Send form data as URLSearchParams object
       });
-      if(response.ok){
-        setSuccess("You have successfully sunscribed to the newsletter");
+  
+      if (response.ok) {
+        setSuccess("You have successfully subscribed to the newsletter");
         console.log(response);
-      }else{
-        const errorData= await response.json();
-        console.log(errorData)
-        setError(errorData.message || "Something wnet wrong!");
+      } else {
+        const errorData = await response.json();
+        console.log(errorData);
+        setError(errorData.message || "Something went wrong!");
       }
     } catch (err) {
-      // 
-      console.log(err)
+      console.log(err);
+      setError("Failed to send request. Please try again later.");
+    } finally {
+      setLoading(false);
     }
-    finally{
-      setLoading(false)
-    }
-  }
+  };
+  
 
     const validationSchema = Yup.object({
-        name: Yup.string().required('Name is required'),
-        email: Yup.string().email('Invalid email address').required('Email is required'),
+        Name: Yup.string().required('Name is required'),
+        Email: Yup.string().email('Invalid email address').required('Email is required'),
       });
 
     const EssentialLinks:{id:number,
@@ -77,7 +76,7 @@ const Footer = () => {
         },
         {id: 5,
             tag: "Features",
-            path: "/"
+            path: "/#features"
         },
     ]
   return (
@@ -131,7 +130,7 @@ const Footer = () => {
                 <h4 className="text-xl">Be the first to receive our products update and other essential updates</h4>
                 <div>
                 <Formik
-            initialValues={{ name: '', email: '', phone: '', message: '' }}
+            initialValues={{ Name: '', Email: '' }}
             validationSchema={validationSchema}
             onSubmit={(values, { resetForm }) => {
               // Handle form submission
@@ -146,22 +145,22 @@ const Footer = () => {
               <Form className="mt-10 w-full flex flex-col justify-center items-start gap-7">
                 <div className="flex flex-col justify-center items-start gap-2 w-full">
                   <Field 
-                    id="name"
-                    name="name"
+                    id="Name"
+                    name="Name"
                     className="rounded-lg outline-none border border-white bg-transparent placeholder-white text-white px-5 py-3 w-full"
-                     placeholder="Enter your first name"
+                     placeholder="Enter your first Name"
                   />
-                  <ErrorMessage name="name" component="div" className="text-red-600 text-sm" />
+                  <ErrorMessage name="Name" component="div" className="text-red-600 text-sm" />
                 </div>
                 <div className="flex flex-col justify-center items-start gap-2 w-full">
                   <Field 
-                    id="email"
-                    name="email"
+                    id="Email"
+                    name="Email"
                     type="email"
                    placeholder="Enter your email address"
                     className=" placeholder-white bg-transparent  text-white rounded-lg outline-none border border-white px-5 py-3 w-full"
                   />
-                  <ErrorMessage name="email" component="div" className="text-red-600 text-sm" />
+                  <ErrorMessage name="Email" component="div" className="text-red-600 text-sm" />
                 </div>
               
                 <button 

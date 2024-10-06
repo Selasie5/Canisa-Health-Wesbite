@@ -16,9 +16,9 @@ const OurStory = () => {
         data-aos-once="false"
         >Empowering health, connecting communities. We're bridging the gap to provide accessible, personalized healthcare for all.</h1>
         <div className="relative">
-        <img src="our-story.png" alt="" className="w-[375px]"/>
+        <img src="our-story.png" alt="" className="w-[375px] rounded-lg"/>
         </div>
-       <img src="/circle.png" alt="" className="rotating-object absolute top-[450px] left-[50px] w-[125px]" />
+       <img src="/circle.png" alt="" className="hidden md:block rotating-object absolute top-[450px] left-[50px] w-[125px]" />
             </section> 
 
             <section className="flex flex-col justify-centter items-start gap-8 px-5">
@@ -57,7 +57,7 @@ const OurStory = () => {
   >
     Our Partners
   </h2>
-  <div className="flex justify-center items-center gap-10 py-5">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-10 px-10 py-5">
     <img src="/db.png" alt="Ashesi D-Lab" className="w-[7rem]" />
     <img src="/3.png" alt="Ferring" className="w-[12rem]" />
     <img src="/Ford-Foundation.svg" alt="Merck" className="w-[7rem]" />
@@ -109,7 +109,7 @@ const OurStory = () => {
               data-aos-mirror="true"
               data-aos-once="false"
               >
-                <Link to="/" className="flex justify-center items-center gap-[0.75rem]">
+                <Link to="/contact" className="flex justify-center items-center gap-[0.75rem]">
                 <span>
                 Become a partner
                 </span>

@@ -21,7 +21,7 @@ const FAQ:React.FC<FAQType> = ({question, answer}) => {
     }
   return (
 
-    <div className="flex flex-col justify-center items-start gap-4 w-full md:w-[831px] px-10 py-5 hover:cursor-pointer" onMouseLeave={hideAnswer} onClick={makeAnswerVisible}>
+    <div className="flex flex-col justify-center items-start gap-2 w-full md:w-[831px] px-10 py-3 hover:cursor-pointer" onMouseLeave={hideAnswer} onClick={makeAnswerVisible}>
         <div className="flex justify-between items-center w-full">
             <span className="text-[19px] w-[494px] font-[400]">{question}</span>
             

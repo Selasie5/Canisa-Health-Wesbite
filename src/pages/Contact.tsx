@@ -31,11 +31,11 @@ const Contact = () => {
       to_name: 'Canisa Health Team'
     };
     setLoading(true);
-    emailjs.send('service_pzvy7v8', 'template_9vve1r5', templateParams, 'UQFOJ-EiMs3pIyj-S')
+    emailjs.send('service_pzvy7v8', 'template_nhyluuv', templateParams, 'PTbpmn_chttVeeV1a')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         Toastify({
-          text: "Your message has been successfully submitted. We will be in toucn with you shortly.",
+          text: "Your message has been successfully submitted. We will be in touch with you shortly.",
           duration: 3000,
           destination: "https://github.com/apvarun/toastify-js",
           newWindow: true,
@@ -44,7 +44,7 @@ const Contact = () => {
           position: "right", // `left`, `center` or `right`
           stopOnFocus: true, // Prevents dismissing of toast on hover
           style: {
-            background: "linear-gradient(to right, #00b09b, #96c93d)",
+            background: "#00CD88",
           },
           // onClick: function(){} // Callback after click
         }).showToast();
