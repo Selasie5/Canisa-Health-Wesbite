@@ -55,9 +55,8 @@ const OurStory = () => {
     data-aos-mirror="true"
     data-aos-once="false"
   >
-    Our Partners
+    We Are Supported By
   </h2>
-  <p className="text-xl font-normal">We are proudly supported by</p>
   <div  className="grid grid-cols-2 md:grid-cols-4 gap-10 px-10 py-10">
     <img src="/db.png" alt="Ashesi D-Lab" className="w-[7rem]" />
     <img src="/3.png" alt="Ferring" className="w-[12rem]" />
