@@ -12,40 +12,40 @@ const Footer = () => {
   const [success, setSuccess] = useState("")
   const [error, setError] = useState("")
 
-  const ProductUpdateSubscription = async (values) => {
-    setLoading(true);
-    setSuccess("");
-    setError("");
+  // const ProductUpdateSubscription = async (values) => {
+  //   setLoading(true);
+  //   setSuccess("");
+  //   setError("");
   
-    // Create a URLSearchParams object to format the data as key-value pairs
-    const formData = new URLSearchParams();
-    formData.append('Name', values.Name);
-    formData.append('Email', values.Email);
+  //   // Create a URLSearchParams object to format the data as key-value pairs
+  //   const formData = new URLSearchParams();
+  //   formData.append('Name', values.Name);
+  //   formData.append('Email', values.Email);
   
-    try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbzkXCezndKD8u1oCXH-tDufEwmBJuyEprlU2O4o7TKmHmFsLMZ4nvnfQd-IU9sLWbT0/exec", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'  // Use the correct header for form data
-        },
-        body: formData,  // Send form data as URLSearchParams object
-      });
+  //   try {
+  //     const response = await fetch("https://script.google.com/macros/s/AKfycbzkXCezndKD8u1oCXH-tDufEwmBJuyEprlU2O4o7TKmHmFsLMZ4nvnfQd-IU9sLWbT0/exec", {
+  //       method: "POST",
+  //       headers: {
+  //         'Content-Type': 'application/x-www-form-urlencoded'  // Use the correct header for form data
+  //       },
+  //       body: formData,  // Send form data as URLSearchParams object
+  //     });
   
-      if (response.ok) {
-        setSuccess("You have successfully subscribed to the newsletter");
-        console.log(response);
-      } else {
-        const errorData = await response.json();
-        console.log(errorData);
-        setError(errorData.message || "Something went wrong!");
-      }
-    } catch (err) {
-      console.log(err);
-      setError("Failed to send request. Please try again later.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     if (response.ok) {
+  //       setSuccess("You have successfully subscribed to the newsletter");
+  //       console.log(response);
+  //     } else {
+  //       const errorData = await response.json();
+  //       console.log(errorData);
+  //       setError(errorData.message || "Something went wrong!");
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     setError("Failed to send request. Please try again later.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
   
 
     const validationSchema = Yup.object({
@@ -135,7 +135,7 @@ const Footer = () => {
             onSubmit={(values, { resetForm }) => {
               // Handle form submission
               console.log(values);
-              ProductUpdateSubscription(values);
+              // ProductUpdateSubscription(values);
 
               // Reset form fields
               resetForm();
