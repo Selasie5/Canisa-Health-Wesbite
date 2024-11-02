@@ -1,98 +1,81 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from 'yup';
-// import { google } from "googleapis";
-
-// import { useState } from "react";
+import { useState } from "react";
 
 const Footer = () => {
-  
- 
-  // const [loading, setLoading] = useState(false);
-  // const [success, setSuccess] = useState("")
-  // const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+  // const [email, setEmail] = useState(""); // State for the email input
 
-  // const ProductUpdateSubscription = async (values) => {
-  //   setLoading(true);
-  //   setSuccess("");
-  //   setError("");
-  
-  //   // Create a URLSearchParams object to format the data as key-value pairs
-  //   const formData = new URLSearchParams();
-  //   formData.append('Name', values.Name);
-  //   formData.append('Email', values.Email);
-  
-  //   try {
-  //     const response = await fetch("https://script.google.com/macros/s/AKfycbzkXCezndKD8u1oCXH-tDufEwmBJuyEprlU2O4o7TKmHmFsLMZ4nvnfQd-IU9sLWbT0/exec", {
-  //       method: "POST",
-  //       headers: {
-  //         'Content-Type': 'application/x-www-form-urlencoded'  // Use the correct header for form data
-  //       },
-  //       body: formData,  // Send form data as URLSearchParams object
-  //     });
-  
-  //     if (response.ok) {
-  //       setSuccess("You have successfully subscribed to the newsletter");
-  //       console.log(response);
-  //     } else {
-  //       const errorData = await response.json();
-  //       console.log(errorData);
-  //       setError(errorData.message || "Something went wrong!");
-  //     }
-  //   } catch (err) {
-  //     console.log(err);
-  //     setError("Failed to send request. Please try again later.");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-  
+  const validationSchema = Yup.object({
+    Name: Yup.string().required('Name is required'),
+    Email: Yup.string().email('Invalid email address').required('Email is required'),
+  });
 
-    const validationSchema = Yup.object({
-        Name: Yup.string().required('Name is required'),
-        Email: Yup.string().email('Invalid email address').required('Email is required'),
+  const EssentialLinks = [
+    { id: 1, tag: "Home", path: "/" },
+    { id: 2, tag: "About Us", path: "/our-story" },
+    { id: 3, tag: "Partner With Us", path: "/health-care-professionals" },
+    { id: 4, tag: "Features", path: "/#features" },
+    { id: 5, tag: "Privacy Policy", path: "https://canisahealth.gitbook.io/canisa-health-privacy-policy" },
+  ];
+
+  const mailerApiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNDc0ZDc0YTZhNjNiMTUxMmQ3ZmE5MTI1MWEwNTQ2Mzg2MTdkYTBkZjQ2ZDI0NjU1MzdkNjVjOWYzZTAyOWM2YzM5OTg2YjFkMWRiY2RhZmMiLCJpYXQiOjE3MzA1NTg3MzIuODczNTQ1LCJuYmYiOjE3MzA1NTg3MzIuODczNTQ4LCJleHAiOjQ4ODYyMzIzMzIuODY5NTQxLCJzdWIiOiIxMDkyNDY0Iiwic2NvcGVzIjpbXX0.tnyZF3HgMC7ZS7jpM_oW2HawSns8gjxLMmO3YufqZhWcAuU6QEOJQyagnbhH8qabLF76JbUWyiHOfMXXDSU4wt5ggsm4yGrpq0x22Rzk6YFABqn7PaYQe-yQ3bIWdufY1vBefh2ohGnkegIBqgvwwzdBIskDD_SddRPu5Zb2vkpfsapYqaWBgIt-j17vAV2SeNQv0pmYhTXwqpszUh_rYHCBg6O1qZA8K60Hn8_efzy_IG9oOFmwYEOQY1aeBQomYBYWshsJS34PLzqbqhPdN4rFVF9nqQQgUhGueeDtYUN9HFdHnHoqcVU01e7QFkbmJwTEJlRB0rIiHU_gX9sKR1fHl7cnJ1CHnFMOqoxCiK73oGLK89XPiWtBaZPmT3XpUFu6v8yziYeapAyVLHCJvrcEPTJR-fS_X1dhYD4Pc10mA8sZrm1Ec-o__JXT7ugLZnrFcZ5otTUvGXlo2rqGHcST8-9ohotRLDJgfD9dEcUYb9Q6wSQcCuFvQa9PzTHPy9uOsGMh4130lTKxDTnLTPx63yBXMnYPUz3BGlf3VWM_QpusH8uSFyqCD6CKkF7lsTd6DTP90A122s_0fymi608b3YnBZJ5Ra2DWKaaSj_DCew_Tl0QzeUz_xkTIG8G1hAHklqVGt1OgxrAaIGr3bpOmsO8mk-noeDIHFc3kZio" // Ensure this is set in your environment
+
+  const handleSubmit = async (values: { Name: string; Email: string }, { resetForm }: any) => {
+    setLoading(true);
+    setSuccess("");
+    setError("");
+
+    try {
+      const response = await fetch("https://connect.mailerlite.com/api/subscribers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          Authorization: `Bearer ${mailerApiKey}`,
+        },
+        body: JSON.stringify({
+          email: values.Email,
+          fields: {
+            name: values.Name,
+          },
+          // Optional: you can add group IDs here
+          // groups: ["4243829086487936"],
+        }),
       });
 
-    const EssentialLinks:{id:number,
-        tag: string,
-        path: string,
-    }[]=[
-        {id: 1,
-            tag: "Home",
-            path: "/"
-        },
-        {
-          id: 2,
-            tag: "About Us",
-            path: "/our-story"
-        },
-        {id: 3,
-            tag: "Partner With Us",
-            path: "/health-care-professionals"
-        },
-        {id: 4,
-            tag: "Features",
-            path: "/#features"
-        },
-        {id: 5,
-            tag: "Privacy Policy",
-            path: "https://canisahealth.gitbook.io/canisa-health-privacy-policy"
-        },
-    ]
+      if (response.ok) {
+        setSuccess("You have successfully subscribed!");
+      } else {
+        const errorData = await response.json();
+        setError(errorData.message || "Something went wrong!");
+      }
+    } catch (err: any) {
+      setError("An unexpected error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+      resetForm(); // Reset the form fields
+    }
+  };
+
   return (
-    <footer className="bg-primary text-white  p-10 flex flex-col justify-center  items-start md:items-center gap-10">
+    <footer className="bg-primary text-white p-10 flex flex-col justify-center items-start md:items-center gap-10">
       <div className="flex flex-col md:flex-row justify-center items-start md:items-start gap-20">
-      <div className="flex flex-col justify-start items-start gap-8 md:w-1/3">
-            <h5 className="text-xl font-medium">Essential Links</h5>
-                {EssentialLinks.map((links)=>(
-                    <Link key={links.id}  to={links.path} >
-                        <span className="text-white font-medium">{links.tag}</span>
-                        </Link>
-                ))}
-         </div>
-         <div className="flex flex-col justify-between items-start gap-8 md:w-1/3">
-            <h5 className="text-xl font-medium">Contact Us</h5>
-                <div className="flex justify-between items-center gap-4">
+        <div className="flex flex-col justify-start items-start gap-8 md:w-1/3">
+          <h5 className="text-xl font-medium">Essential Links</h5>
+          {EssentialLinks.map((links) => (
+            <Link key={links.id} to={links.path}>
+              <span className="text-white font-medium">{links.tag}</span>
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex flex-col justify-between items-start gap-8 md:w-1/3">
+          <h5 className="text-xl font-medium">Contact Us</h5>
+          <div className="flex justify-between items-center gap-4">
 <span>
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
@@ -124,22 +107,14 @@ const Footer = () => {
                     <img src="/x.jpeg" alt="twitter" className="w-7"/>
                     </Link>
                 </div>
-         </div> 
+        </div>
 
-         <div className="bg-green-800/40 p-5 rounded-lg h-auto text-white md:w-3/5">
-                <h4 className="text-xl">Be the first to receive our products update and other essential updates</h4>
-                <div>
-                <Formik
+        <div className="bg-green-800/40 p-5 rounded-lg h-auto text-white md:w-3/5">
+          <h4 className="text-xl">Be the first to receive our product updates and other essential news</h4>
+          <Formik
             initialValues={{ Name: '', Email: '' }}
             validationSchema={validationSchema}
-            onSubmit={(values, { resetForm }) => {
-              // Handle form submission
-              console.log(values);
-              // ProductUpdateSubscription(values);
-
-              // Reset form fields
-              resetForm();
-            }}
+            onSubmit={handleSubmit}
           >
             {() => (
               <Form className="mt-10 w-full flex flex-col justify-center items-start gap-7">
@@ -148,7 +123,7 @@ const Footer = () => {
                     id="Name"
                     name="Name"
                     className="rounded-lg outline-none border border-white bg-transparent placeholder-white text-white px-5 py-3 w-full"
-                     placeholder="Enter your first Name"
+                    placeholder="Enter your first Name"
                   />
                   <ErrorMessage name="Name" component="div" className="text-red-600 text-sm" />
                 </div>
@@ -157,35 +132,32 @@ const Footer = () => {
                     id="Email"
                     name="Email"
                     type="email"
-                   placeholder="Enter your email address"
-                    className=" placeholder-white bg-transparent  text-white rounded-lg outline-none border border-white px-5 py-3 w-full"
+                    placeholder="Enter your email address"
+                    className="placeholder-white bg-transparent text-white rounded-lg outline-none border border-white px-5 py-3 w-full"
                   />
                   <ErrorMessage name="Email" component="div" className="text-red-600 text-sm" />
                 </div>
-              
+
                 <button 
                   type="submit" 
                   className="font-medium text-white bg-primary rounded-full px-10 py-3 w-full flex flex-col justify-center items-center"
+                  disabled={loading}
                 >
-                  {/* {loading ? (
-                    "Loading.."
-                  ): (
-                    <p>Suscribe</p>
-                  )} */}Suscribe
+                  {loading ? "Loading..." : "Subscribe"}
                 </button>
+                {success && <div className="text-white bg-black/30 p-2 rounded-lg">{success} 👍</div>}
+                {error && <div className="text-red-600">{error}</div>}
               </Form>
             )}
           </Formik>
-                </div>
-         </div>
+        </div>
       </div>
-     <div className="flex justify-center items-center text-center">
+
+      <div className="flex justify-center items-center text-center">
         <span className="text-white font-light text-md md:text-lg">&copy; 2024 Canisa Health. All rights reserved</span>
-     </div>
-     {/* {error}
-     {success} */}
+      </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
