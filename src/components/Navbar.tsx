@@ -80,8 +80,8 @@ const Navbar = () => {
 
         <div className='mt-4 w-full'>
           <button className='bg-primary px-9 py-[0.75rem] rounded-full w-full'>
-            <Link to="/">
-              <span className='font-medium text-md text-white'>Get The App</span>
+            <Link to="/contact-us">
+              <span className='font-medium text-md text-white'>Request Demo</span>
             </Link>
           </button>
         </div>

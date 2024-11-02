@@ -71,12 +71,12 @@ const Footer = () => {
             path: "/health-care-professionals"
         },
         {id: 4,
-            tag: "Benefits",
-            path: "/"
-        },
-        {id: 5,
             tag: "Features",
             path: "/#features"
+        },
+        {id: 5,
+            tag: "Privacy Policy",
+            path: "https://canisahealth.gitbook.io/canisa-health-privacy-policy"
         },
     ]
   return (

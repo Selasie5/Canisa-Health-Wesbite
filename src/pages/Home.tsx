@@ -167,7 +167,7 @@ const Home = () => {
          data-aos-mirror="true"
          data-aos-once="false"
         >
-          Personalized Chronic Care Management at your fingertips
+          Chronic Care, Personalized and Simplified
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-6 md:gap-10 20"
          data-aos="zoom-in"
@@ -210,7 +210,7 @@ const Home = () => {
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
         data-aos-once="false"
-        > Manage Health effectively with Canisa Health. Track, monitor, and receive personalized advice to improve your quality of life.</p>
+        > Manage your health effectively with Canisa Health. Track, monitor, and receive personalized advice to improve your quality of life.</p>
       </section>
 
       <section className="flex flex-col justify-center items-center gap-4 px-10 text-center">
