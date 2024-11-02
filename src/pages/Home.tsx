@@ -59,8 +59,8 @@ const Home = () => {
     },
     {
       id: 4,
-      question: "How can I consult with a doctor using Canisa Health?",
-      answer: "You can connect with a qualified doctor through the app for real-time consultations. Simply select the 'Consultation' feature, and you'll be guided through the process to speak with a doctor.",
+      question: "Can I consult with a doctor using Canisa Health?",
+      answer: "No. Canisa Health ensures that you can follow up with your doctor outside of your hospital visits. We are working on making consulations available to you.",
     },
     {
       id: 5,

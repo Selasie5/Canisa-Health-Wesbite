@@ -49,7 +49,7 @@ const HCP = () => {
         data-aos-mirror="true"
         data-aos-once="false"
         >
-          <Link to="/">
+          <Link to="/contact-us">
           Get Started
           </Link>
         </button>

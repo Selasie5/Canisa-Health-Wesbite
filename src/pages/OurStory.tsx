@@ -10,7 +10,7 @@ const OurStory = () => {
         <section className=" px-6 py-10 h-auto bg-primary text-white flex flex-col justify-center items-center gap-10">
         <h1 className="text-[2.2rem] font-medium"
         data-aos="fade-in"
-        data-aos-duration="1500"
+        data-aos-duration="1000"
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
         data-aos-once="false"
@@ -24,7 +24,7 @@ const OurStory = () => {
             <section className="flex flex-col justify-centter items-start gap-8 px-5">
                 <span className="uppercase text-black font-[500]  text-lg border border-black  px-10 py-[0.5rem] rounded-full"
                 data-aos="fade-in"
-                data-aos-duration="1500"
+                data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
                 data-aos-once="false"
@@ -33,7 +33,7 @@ const OurStory = () => {
                 </span>
                 <p className="text-grey font-medium text-lg"
                 data-aos="fade-in"
-                data-aos-duration="1500"
+                data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
                 data-aos-once="false"
@@ -42,7 +42,7 @@ const OurStory = () => {
                 </p>
                 <img src="/drugs.png" alt="drugs" className="w-full"
                 data-aos="fade-in"
-                data-aos-duration="1500"
+                data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
                 data-aos-once="false"/>
@@ -50,14 +50,15 @@ const OurStory = () => {
             <section className="flex flex-col justify-center items-center gap-5">
   <h2 className="text-4xl font-[700]"
     data-aos="fade-in"
-    data-aos-duration="1500"
+    data-aos-duration="1000"
     data-aos-easing="ease-in-out"
     data-aos-mirror="true"
     data-aos-once="false"
   >
     Our Partners
   </h2>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-10 px-10 py-5">
+  <p className="text-xl font-normal">We are proudly supported by</p>
+  <div  className="grid grid-cols-2 md:grid-cols-4 gap-10 px-10 py-10">
     <img src="/db.png" alt="Ashesi D-Lab" className="w-[7rem]" />
     <img src="/3.png" alt="Ferring" className="w-[12rem]" />
     <img src="/Ford-Foundation.svg" alt="Merck" className="w-[7rem]" />
@@ -69,7 +70,7 @@ const OurStory = () => {
   <div>
     <span className="text-green-900 text-lg font-medium rounded-full bg-primary/30 px-10 py-2 text-md"
       data-aos="fade-in"
-      data-aos-duration="1500"
+      data-aos-duration="1000"
       data-aos-easing="ease-in-out"
       data-aos-mirror="true"
       data-aos-once="false"
@@ -104,12 +105,12 @@ const OurStory = () => {
             <div className="flex flex-col justify-center items-center py-10">
               <button className="text-white bg-primary px-5 py-3 rounded-full"
               data-aos="fade-in"
-              data-aos-duration="1500"
+              data-aos-duration="1000"
               data-aos-easing="ease-in-out"
               data-aos-mirror="true"
               data-aos-once="false"
               >
-                <Link to="/contact" className="flex justify-center items-center gap-[0.75rem]">
+                <Link to="/contact-us" className="flex justify-center items-center gap-[0.75rem]">
                 <span>
                 Become a partner
                 </span>

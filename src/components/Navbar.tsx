@@ -38,8 +38,8 @@ const Navbar = () => {
           </div>
           <div className='hidden lg:block'>
             <button className='bg-primary px-9 py-[0.75rem] rounded-full'>
-              <Link to="/">
-                <span className='font-medium text-md text-white'>Get The App</span>
+              <Link to="/contact-us">
+                <span className='font-medium text-md text-white'>Get App In Beta</span>
               </Link>
             </button>
           </div>
@@ -81,7 +81,7 @@ const Navbar = () => {
         <div className='mt-4 w-full'>
           <button className='bg-primary px-9 py-[0.75rem] rounded-full w-full'>
             <Link to="/contact-us">
-              <span className='font-medium text-md text-white'>Request Demo</span>
+              <span className='font-medium text-md text-white'>Request A Demo</span>
             </Link>
           </button>
         </div>
