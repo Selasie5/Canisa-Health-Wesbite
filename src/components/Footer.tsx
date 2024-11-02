@@ -3,14 +3,14 @@ import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from 'yup';
 // import { google } from "googleapis";
 
-import { useState } from "react";
+// import { useState } from "react";
 
 const Footer = () => {
   
  
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState("")
-  const [error, setError] = useState("")
+  // const [loading, setLoading] = useState(false);
+  // const [success, setSuccess] = useState("")
+  // const [error, setError] = useState("")
 
   // const ProductUpdateSubscription = async (values) => {
   //   setLoading(true);
@@ -167,11 +167,11 @@ const Footer = () => {
                   type="submit" 
                   className="font-medium text-white bg-primary rounded-full px-10 py-3 w-full flex flex-col justify-center items-center"
                 >
-                  {loading ? (
+                  {/* {loading ? (
                     "Loading.."
                   ): (
                     <p>Suscribe</p>
-                  )}
+                  )} */}Suscribe
                 </button>
               </Form>
             )}
@@ -182,8 +182,8 @@ const Footer = () => {
      <div className="flex justify-center items-center text-center">
         <span className="text-white font-light text-md md:text-lg">&copy; 2024 Canisa Health. All rights reserved</span>
      </div>
-     {error}
-     {success}
+     {/* {error}
+     {success} */}
     </footer>
   )
 }
